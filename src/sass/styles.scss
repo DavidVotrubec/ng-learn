@@ -4,5 +4,6 @@
 
 body {
     background-color: lightgrey;
-    color: darkgrey;
+    font: 100% $font-stack;
+    color: $primary-color;
 }
