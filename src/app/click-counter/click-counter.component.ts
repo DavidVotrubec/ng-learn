@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import * as Rx from 'rxjs/Rx'; // Careful. The "import Rx from 'rxjs/Rx' does not work in VSCode 
 import 'rxjs/add/observable/fromEvent';
 import 'rxjs/add/observable/timer';
 import 'rxjs/add/observable/interval';
@@ -30,42 +31,33 @@ export class ClickCounterComponent implements OnInit, AfterViewInit  {
   constructor() { }
 
   ngOnInit() {
-    // this.button = document.
   }
 
   ngAfterViewInit(){
+    const period = 250;
+
     this.button = this.buttonElement.nativeElement;
+    this.clickStream = Rx.Observable.fromEvent(this.button, 'click');       
 
-    this.clickStream = Observable.fromEvent(this.button, 'click');    
-    var interval = Observable.interval(250);
-    var interval2 = Observable.interval(250);
-
-    // now the buffer is called, but it has weird result.
-    // I've probably missundertood something.
-    // It is hard to find good examples, because the old versions (v4) seems to have deprecated methods
-    // and then the examples does not work
-    this.singleClickStream = interval.buffer(this.clickStream)
-    .map(function (list) {
-      return list.length;
-    })
+    this.singleClickStream = this.clickStream.buffer(this.clickStream.throttle((ev) => {      
+      return Rx.Observable.interval(period);
+    }))
+    .map((list) => list.length)
     .filter((x) => x == 1);
 
-    this.multiClickStream = interval2.buffer(this.clickStream)
+    this.multiClickStream = this.clickStream.buffer(this.clickStream.throttle((ev) => {
+      return Rx.Observable.interval(period);
+    }))
     .map((list) => list.length)
     .filter((x) => x >= 2);
 
-
     this.singleClickStream.subscribe(() => {
-      debugger
       this.singleClickCounter++;
     })
 
-
     this.multiClickStream.subscribe(() => {
-      debugger
       this.multipleClickCounter = this.multipleClickCounter + 1;
     })
-
 
   }
 
