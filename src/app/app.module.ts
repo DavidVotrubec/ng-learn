@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import {FormsModule} from '@angular/forms'
 
 
@@ -20,6 +20,8 @@ import { ClickCounterComponent } from './click-counter/click-counter.component';
     BrowserModule, FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  // CUSTOM_ELEMENTS_SCHEMA means that ANY custom elements are allowed (not necessarily all mine, but this is imao fine)
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
