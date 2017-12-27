@@ -1,16 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { ColorPickerComponent } from './color-picker.component';
 
-describe('ColorPickerComponent', () => {
+describe('TestMeComponent', () => {
   let component: ColorPickerComponent;
   let fixture: ComponentFixture<ColorPickerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ColorPickerComponent ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      declarations: [ ColorPickerComponent ]
     })
     .compileComponents();
   }));

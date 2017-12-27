@@ -12,6 +12,12 @@ export class ColorPickerComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  refresh(){
+    alert('fresh');
+  }
+
+
   color = 'orange';
   allColors = ['red', 'orange', 'blue', 'green'];
   colorIndex = 0;
