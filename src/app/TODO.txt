@@ -9,6 +9,7 @@ How does ahead of time (AOT) compilation works? and how does it affect performan
 See https://angular.io/guide/aot-compiler
 
 TODO: How does @injectable works?
+See https://toddmotto.com/angular-decorators
 
 TODO: How does Decorators injectable works?
 
@@ -33,3 +34,21 @@ While Directive only modifies of add functionality of existing elements.
 
 
 TODO: Learn more about Shadow DOM. 
+
+
+
+
+
+
+
+-----------------------------------------
+Decorators:
+
+- Class decorators, e.g. @Component and @NgModule
+- Property decorators for properties inside classes, e.g. @Input and @Output
+- Method decorators for methods inside classes, e.g. @HostListener
+- Parameter decorators for parameters inside class constructors, e.g. @Inject
+
+
+
+
