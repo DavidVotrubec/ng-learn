@@ -1,8 +1,10 @@
 import { Directive, ElementRef, Input, HostListener } from '@angular/core';
+import {Console} from '../decorators/console';
 
 @Directive({
   selector: '[highlight]'
 })
+@Console('Hi Light')
 export class HighlightDirective {
 
   constructor(public element: ElementRef) { 
