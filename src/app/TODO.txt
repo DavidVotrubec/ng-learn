@@ -1,0 +1,22 @@
+Angular modules vs ES6 modules
+How does decorators work?
+best IDE for modern javascript development?
+
+each Angular Module should have its own routing
+NgModuel is the unit of reusability
+
+
+TODO: Try to declare several modules and play with import/export
+like peopleModule, companyModule and sharedModule with common functionality
+
+TODO: How does Angular lazy loading works?
+How does ahead of time (AOT) compilation works? and how does it affect performance?
+
+TODO: How does @injectable works?
+
+
+Note about importing angular modules:
+- when you import module because of services, you that only ONCE, in the main module.
+- if you import it because of template-related things, then you need to import it in EACH module, where it is used.
+- Avoid importing service modules more then once. It may lead to errors and degrade performance.
+- services provided in lazy-loaded module, will be available only in that module. Because they became part of diferent bundle. 

@@ -10,6 +10,9 @@ import { ClickCounterComponent } from './click-counter/click-counter.component';
 
 
 @NgModule({
+  // "declarations" are components, directives and pipes
+  // they only display data
+  // They are private for this module only. If you want to share them, then you need to add them to the exports[]
   declarations: [
     AppComponent,
     ColorPickerComponent,
@@ -19,6 +22,10 @@ import { ClickCounterComponent } from './click-counter/click-counter.component';
   imports: [
     BrowserModule, FormsModule
   ],
+  // exports are available for import from other NgModules
+  exports: [],
+  // "providers" are services. They get and set the data
+  // They are global. No need to export??
   providers: [],
   bootstrap: [AppComponent],
   // CUSTOM_ELEMENTS_SCHEMA means that ANY custom elements are allowed (not necessarily all mine, but this is imao fine)
