@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ColorPickerComponent } from './color-picker/color-picker.component';
 import { GithubUsersComponent } from './github-users/github-users.component';
 import { ClickCounterComponent } from './click-counter/click-counter.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ClickCounterComponent } from './click-counter/click-counter.component';
     AppComponent,
     ColorPickerComponent,
     GithubUsersComponent,
-    ClickCounterComponent
+    ClickCounterComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule, FormsModule, SharedModule

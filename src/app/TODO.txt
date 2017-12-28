@@ -24,5 +24,12 @@ Note about importing angular modules:
 What is BrowserModule and its variants for server?
 
 What is a difference between Directive and Component?
+It seems that directive is for attributes only?
+component is a special-case of directive.
+Directive can be attached to another directive and it should be highly reusable. 
+Components force isolated scope and encourage one-way binding. Component also uses Shadow DOM.
+@View or TemplateUrl is mandatory for a Component. 
+While Directive only modifies of add functionality of existing elements.
 
 
+TODO: Learn more about Shadow DOM. 
