@@ -3,6 +3,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/cor
 import {FormsModule} from '@angular/forms'
 
 
+import { SharedModule } from './shared-module/shared-module.module';
 import { AppComponent } from './app.component';
 import { ColorPickerComponent } from './color-picker/color-picker.component';
 import { GithubUsersComponent } from './github-users/github-users.component';
@@ -20,7 +21,7 @@ import { ClickCounterComponent } from './click-counter/click-counter.component';
     ClickCounterComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, SharedModule
   ],
   // exports are available for import from other NgModules
   exports: [],
