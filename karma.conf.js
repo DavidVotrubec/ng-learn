@@ -29,7 +29,14 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     //browsers: ['Chrome'], // Chrome has sometimes problems with resolving proxy after computer wakes up, this can take several minutes
-    browsers: ['Firefox'],
+    //browsers: ['Firefox'],
+    browsers: ['FirefoxHeadless'],
+    customLaunchers: {
+      FirefoxHeadless: {
+        base: 'Firefox',
+        flags: [ '-headless' ],
+      },
+    },
     singleRun: false
   });
 };
