@@ -9,6 +9,7 @@ import { ColorPickerComponent } from './color-picker/color-picker.component';
 import { GithubUsersComponent } from './github-users/github-users.component';
 import { ClickCounterComponent } from './click-counter/click-counter.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { DragNDropWithObservablesComponent } from './drag-n-drop-with-observables/drag-n-drop-with-observables.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     ColorPickerComponent,
     GithubUsersComponent,
     ClickCounterComponent,
-    HighlightDirective
+    HighlightDirective,
+    DragNDropWithObservablesComponent
   ],
   imports: [
     BrowserModule, FormsModule, SharedModule
