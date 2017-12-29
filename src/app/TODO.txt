@@ -4,15 +4,6 @@ each Angular Module should have its own routing
 NgModuel is the unit of reusability
 
 
-TODO: How does Angular lazy loading works?
-How does ahead of time (AOT) compilation works? and how does it affect performance?
-See https://angular.io/guide/aot-compiler
-
-TODO: How does @injectable works?
-See https://toddmotto.com/angular-decorators
-
-TODO: How does Decorators injectable works?
-
 TODO: What is @Input for? 
 build a component which utilizes that
 
@@ -36,9 +27,9 @@ While Directive only modifies of add functionality of existing elements.
 TODO: Learn more about Shadow DOM. 
 
 
+TODO: How Angular handles i18n and localization/transation?
 
-
-
+TODO: Forms and Validations
 
 
 -----------------------------------------
@@ -50,5 +41,11 @@ Decorators:
 - Parameter decorators for parameters inside class constructors, e.g. @Inject
 
 
+-----------------------------------------
+Dependency Injection:
+ @Injectable is required if the class (service) has dependencies on some other services, such as Http.
+ Without that annotation, Angular can not compose that instance correctly.
+ So to avoid possible problems, it is better to always add the @Injectable.
+ OR be clever and add it only when there are some dependencies 
 
 
